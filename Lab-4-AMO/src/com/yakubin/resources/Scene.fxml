@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" prefWidth="800" prefHeight="550" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yakubin.Controller" stylesheets="@style.css">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Метод ітерацій для рівняння: ln(x) + (x+1)³ = 0" styleClass="title-label"/>
+
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <LineChart fx:id="lineChart" title="Графік лівої частини" createSymbols="false" HBox.hgrow="ALWAYS">
+            <xAxis><NumberAxis label="X" /></xAxis>
+            <yAxis><NumberAxis label="Y" /></yAxis>
+        </LineChart>
+
+        <VBox spacing="15" prefWidth="250" styleClass="control-panel">
+            <Label text="Параметри:" style="-fx-font-weight: bold;"/>
+
+            <VBox spacing="5">
+                <Label text="Точність (eps):"/>
+                <TextField fx:id="epsField" text="0.0001"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Початкове x0:"/>
+                <TextField fx:id="x0Field" text="0.2"/>
+            </VBox>
+
+            <Button text="Обчислити корінь" onAction="#handleCalculate" maxWidth="Infinity" styleClass="main-button"/>
+
+            <Separator/>
+
+            <Label text="Лог обчислень:"/>
+            <TextArea fx:id="resultArea" VBox.vgrow="ALWAYS" editable="false" wrapText="true" styleClass="result-text"/>
+        </VBox>
+    </HBox>
+</VBox>

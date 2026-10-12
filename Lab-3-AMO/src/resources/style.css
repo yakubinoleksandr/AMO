@@ -1,0 +1,25 @@
+.root { -fx-background-color: #f4f7f6; -fx-font-family: "Segoe UI"; }
+
+/* Приховуємо точки для ліній (Серія 0 та 1) */
+.default-color0.chart-line-symbol,
+.default-color1.chart-line-symbol {
+    -fx-background-color: transparent, transparent;
+    -fx-padding: 0px;
+}
+
+/* Налаштовуємо вузли (Серія 2) */
+.default-color2.chart-series-line { -fx-stroke: transparent; } /* Прибираємо лінію між точками */
+.default-color2.chart-line-symbol {
+    -fx-background-color: #e74c3c, white;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+}
+
+/* Оформлення ліній */
+.default-color0.chart-series-line { -fx-stroke: #7f8c8d; -fx-stroke-dash-array: 6 6; }
+.default-color1.chart-series-line { -fx-stroke: #3498db; -fx-stroke-width: 3px; }
+
+/* Дизайн UI */
+.button { -fx-background-color: #3498db; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 10 20; }
+.button:hover { -fx-background-color: #2980b9; }
+.text-field { -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5; }
